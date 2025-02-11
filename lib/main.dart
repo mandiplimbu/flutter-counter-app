@@ -1,36 +1,36 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(Counter());
 }
 
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+class Counter extends StatefulWidget {
+  const Counter({super.key});
 
   @override
-  State<MyApp> createState() => _MyAppState();
+  State<Counter> createState() => _CounterState();
 }
 
 // the widget class
-class _MyAppState extends State<MyApp> {
+class _CounterState extends State<Counter> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MyAppScreen(),
+      home: CounterScreen(),
     );
   }
 }
 
 // the state class
-class MyAppScreen extends StatefulWidget {
-  const MyAppScreen({super.key});
+class CounterScreen extends StatefulWidget {
+  const CounterScreen({super.key});
 
   @override
-  State<MyAppScreen> createState() => _MyAppScreenState();
+  State<CounterScreen> createState() => _CounterScreenState();
 }
 
-class _MyAppScreenState extends State<MyAppScreen> {
+class _CounterScreenState extends State<CounterScreen> {
   int _count = 0;
   void _increment() {
     setState(() {
